@@ -1,0 +1,121 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #007bff;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+#intro {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.intro-text {
+    z-index: 1;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+/* Parallax Sections */
+.parallax-bg {
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+#expertise, #technology, #care {
+    position: relative;
+    z-index: 1;
+}
+
+/* Quadrilateral Box Container */
+.quad-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/* Quadrilateral Box Styles */
+.quad-box {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    height: 200px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.quad-box.box1 {
+    background-color: #007bff;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.quad-box.box2 {
+    background-color: #ff5733;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%);
+}
+
+.quad-box.box3 {
+    background-color: #28a745;
+    clip-path: polygon(0% 0%, 100% 20%, 80% 100%, 20% 80%);
+}
+
+.quad-box.box4 {
+    background-color: #ffc107;
+    clip-path: polygon(20% 0%, 80% 20%, 100% 80%, 0% 100%);
+}
+
+.quad-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scrollreveal {
+    visibility: hidden;
+}

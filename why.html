@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Choose Us?</title>
+    <link rel="stylesheet" href="why.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <!-- Introduction Section -->
+        <section id="intro">
+            <video autoplay muted loop id="background-video">
+                <source src="./videos/4779866-hd_1920_1080_30fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="intro-text">
+                <h1>Why Choose Us?</h1>
+                <p>Your health is our priority. Discover why we are the best choice for your medical needs.</p>
+            </div>
+        </section>
+
+
+    <!-- Expertise Section with Quadrilateral Boxes -->
+    <section id="expertise">
+        <div class="content">
+            <h2>Expertise You Can Trust</h2>
+            <p>Our team of experienced professionals provides top-notch medical care.</p>
+            <div class="quad-container">
+                <div class="quad-box box1">Box 1</div>
+                <div class="quad-box box2">Box 2</div>
+                <div class="quad-box box3">Box 3</div>
+                <div class="quad-box box4">Box 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology">
+        <div class="content">
+            <h2>Advanced Technology</h2>
+            <p>We use the latest technology to ensure accurate diagnoses and effective treatments.</p>
+        </div>
+    </section>
+
+    <!-- Compassionate Care Section -->
+    <section id="care">
+        <div class="content">
+            <h2>Compassionate Care</h2>
+            <p>We treat every patient with compassion and respect, ensuring a comfortable experience.</p>
+        </div>
+    </section>
+
+    <script>
+        // ScrollReveal animations
+        ScrollReveal().reveal('.intro-text', {
+            origin: 'top',
+            distance: '50px',
+            duration: 1000,
+            easing: 'ease-in-out'
+        });
+
+        ScrollReveal().reveal('.content', {
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000,
+            easing: 'ease-in-out',
+            interval: 200
+        });
+
+        // ScrollReveal for smooth reveal animation of quadrilateral boxes
+        ScrollReveal().reveal('.quad-box', {
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000,
+            easing: 'ease-in-out',
+            interval: 200
+        });
+    </script>
+</body>
+</html>

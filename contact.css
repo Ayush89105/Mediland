@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Fallback background color */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#intro-section {
+    background: linear-gradient(135deg,grey,black); /* Dark gray color instead of black for a softer look */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Add padding for some breathing space */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+#intro-section h1 {
+    color: black; /* Black text for contrast */
+    font-size: 2em; /* Large, prominent text */
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+}
+
+.categories-grid-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 800px;
+    max-height: 400px;
+    margin: 25px auto;
+    background: #fff;
+    padding: 40px; /* Increased padding for better spacing */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-image: url('./videos/back.jpeg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+}
+
+h1 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+p {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 5px; /* Space between each form group */
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 22px); /* Adjust width to account for padding */
+    padding: 2px 2px; /* Add padding inside the input fields */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 5px; /* Margin above each field */
+    margin-bottom: 15px; /* Margin below each field for spacing */
+    max-height: 50px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color:grey;
+}
+
+.empty-box {
+    background-color: black;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: 40px;
+    overflow: hidden; /* Ensure the image fits perfectly within the box */
+    margin-top: 100px;
+    margin-right: 70px;
+}
+
+.empty-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire box */
+    display: block;
+}

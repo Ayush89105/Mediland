@@ -1,0 +1,203 @@
+/* style.css */
+#intro-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+#intro-section h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#intro-section p {
+    font-size: 1.25rem;
+    color: #34495e;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* style.css */
+#centered-box {
+    width: 350px;
+    height: 400px;
+    background-color:black; /* You can change the color */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Optional for rounded corners */
+    margin-top: 250px;
+}
+
+/* Optional: Add text or content inside the box */
+#centered-box p {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: flex-start; /* Align to the left by default */
+    align-items: center;
+    margin-bottom: 175px; /* Add space between contents */
+}
+
+.content:nth-child(2) {
+    justify-content: flex-end; /* Align the second content to the right */
+}
+
+.content .image {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.content .image img {
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content .text-box {
+    z-index: 222;
+    background: black;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    max-width: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transform: translate(-80px, 50px); /* Position for first and third content */
+    text-align: center;
+    height: auto;
+}
+
+.content .text-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.content .text-box p {
+    font-size: 0.8em;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+.content .text-box2 {
+    z-index: 222;
+    background: black;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    max-width: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transform: translate(80px, 50px); /* Attach the text box to the right of the image */
+    text-align: center;
+    height: auto;
+}
+
+.content .text-box2 h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.content .text-box2 p {
+    font-size: 0.8em;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+
+
+/* style.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.netflix-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100vw; /* Full width of the viewport */
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+    width: calc((100% / 5) - 10px); /* Width of each image minus the gap */
+    height: 250px; /* Height of each image */
+    object-fit: cover;
+    margin-right: 20px; /* Gap between images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    border-radius: 20px;
+}
+
+.carousel-track img:hover {
+    transform: scale(1.1); /* Slightly enlarge the image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    opacity: 0.9; /* Slightly reduce opacity */
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 0;
+}
+
+.carousel-control.next {
+    right: 0;
+}

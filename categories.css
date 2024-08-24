@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #333;
+}
+
+#intro-section {
+    background-color:rgb(214, 209, 209); /* Dark gray color instead of black for a softer look */
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Add padding for some breathing space */
+    box-shadow: white; /* Add subtle shadow for depth */
+}
+
+#intro-section h1 {
+    color:black; /* White text for contrast */
+    font-size: 2.5em; /* Large, prominent text */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text */
+    margin: 0; /* Remove default margin */
+    letter-spacing: 1px; /* Slight letter spacing for a modern touch */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+}
+
+.categories {
+    position: relative;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+}
+
+.categories-grid-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 700px;
+}
+
+.category-box {
+    background-color:white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+}
+
+.category-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.category-box h3 {
+    font-size: 1.2em;
+    color:black;
+    margin: 10px 0;
+}
+
+.category-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.empty-box {
+    background-color:white;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: 40px;
+    overflow: hidden; /* Ensure the image fits perfectly within the box */
+}
+
+.empty-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire box */
+    display: block;
+}

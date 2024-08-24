@@ -1,0 +1,256 @@
+/* General reset for better cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header, .video-container {
+    height: 100vh; /* Full height of the viewport */
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Prevent overflow of video */
+}
+
+.video-container {
+    position: relative;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+
+
+.background-video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+
+/* Content Styles */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    width: 100%; /* Adjust to container width */
+
+}
+
+.content h2 {
+    color: white;
+    font-size: 8vw; /* Adjust based on viewport width */
+    font-weight: 500;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.content h2:nth-child(1) {
+    color: grey;
+}
+
+.content h2:nth-child(2) {
+    color: black;
+    animation: animate 2s ease-in-out infinite;
+}
+
+/* Keyframes for Animation */
+@keyframes animate {
+    0%, 100% {
+        clip-path: polygon(0% 50%, 10% 55%, 20% 50%, 30% 45%, 40% 50%, 50% 45%, 60% 55%, 70% 50%, 80% 45%, 90% 50%, 100% 45%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0% 40%, 10% 35%, 20% 45%, 30% 40%, 40% 50%, 50% 45%, 60% 35%, 70% 40%, 80% 50%, 90% 45%, 100% 50%, 100% 100%, 0% 100%);
+    }
+    25% {
+        clip-path: polygon(0% 55%, 10% 50%, 20% 60%, 30% 55%, 40% 65%, 50% 60%, 60% 50%, 70% 60%, 80% 55%, 90% 60%, 100% 55%, 100% 100%, 0% 100%);
+    }
+}
+
+#intro-section {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 90%; /* Responsive width */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the section */
+}
+
+#intro-section h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#intro-section p {
+    font-size: 1.25rem;
+    color: #34495e;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Centered Box */
+#centered-box {
+    width: 80vw;
+    max-width: 350px;
+    height: auto;
+    background-color: hsl(204, 70%, 53%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 50px; /* Adjusted margin */
+    padding: 20px;
+}
+
+#centered-box p {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* Container and Content Layout */
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: flex-start; /* Align to the left by default */
+    align-items: center;
+    margin-bottom: 175px; /* Add space between contents */
+}
+
+.content:nth-child(2) {
+    justify-content: flex-end; /* Align the second content to the right */
+}
+
+/* Image and Text Box Styles */
+.content .image {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.content .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 111;
+}
+
+.content .text-box, .content .text-box2 {
+    z-index: 222;
+    background: black;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+    max-width: 250px;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-align: center;
+    height: auto;
+}
+
+.content .text-box {
+    transform: translate(-80px, 50px); /* Position for first and third content */
+}
+
+.content .text-box2 {
+    transform: translate(80px, 50px); /* Attach the text box to the right of the image */
+}
+
+.content .text-box h3, .content .text-box2 h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.content .text-box p, .content .text-box2 p {
+    font-size: 0.8em;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color:grey;
+}
+
+
+
+.empty-box {
+    background-color: black;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 1.5em;
+    margin-left: auto;
+    margin-right: 40px;
+    overflow: hidden; /* Ensure the image fits perfectly within the box */
+    margin-top: 100px;
+    margin-right: 70px;
+}
+
+.empty-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire box */
+    display: block;
+}
+
+
